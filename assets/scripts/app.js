@@ -12,10 +12,10 @@ function createAndWriteOutput(operator, resultBeforCalc, calcNumber) {
 
 function calculateResult(calculationtype) {
   if (
-    calculationtype !== 'ADD' ||
-    calculationtype !== 'SUBTRACT' ||
-    calculationtype !== 'MULTIPLY' ||
-    calculationtype !== 'DIVIDE'
+    calculationtype === 'ADD' ||
+    calculationtype === 'SUBTRACT' ||
+    calculationtype === 'MULTIPLY' ||
+    calculationtype === 'DIVIDE'
   ) {
     const enteredNumber = getUserInput();
     const initialResult = currentResult;
