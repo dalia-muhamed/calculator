@@ -38,23 +38,7 @@ function calculateResult(calculationtype) {
   }
 }
 
-function add() {
-  calculateResult('ADD');
-}
-
-function subtract() {
-  calculateResult('SUBTRACT');
-}
-
-function multiply() {
-  calculateResult('MULTIPLY');
-}
-
-function divide() {
-  calculateResult('DIVIDE');
-}
-
-addBtn.addEventListener('click', add);
-subtractBtn.addEventListener('click', subtract);
-multiplyBtn.addEventListener('click', multiply);
-divideBtn.addEventListener('click', divide);
+addBtn.addEventListener('click', calculateResult.bind(this, 'ADD'));
+subtractBtn.addEventListener('click', calculateResult.bind(this, 'SUBTRACT'));
+multiplyBtn.addEventListener('click', calculateResult.bind(this, 'MULTIPLY'));
+divideBtn.addEventListener('click', calculateResult.bind(this, 'DIVIDE'));
